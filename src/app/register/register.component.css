@@ -1,0 +1,18 @@
+.form-control{
+    width:300px;
+}
+.card{
+    margin-top: 80px;
+    margin-left: 400px;
+    width:450px;
+    padding-left: 40px;
+    
+}
+span{
+    color:red;
+    font-size: 10pt;
+
+}
+h5{
+    margin-left: 10px;
+}

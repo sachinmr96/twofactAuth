@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+          <div class="container">
+            <p class="navbar-text navbar-right"><a href="/about" class="navbar-link"><h2>AuthApp</h2></a></p>
+          </div>
+</nav>
+ <div class="card">
+          <div class="card-body">
+               <h4>Login</h4><br>
+<form [formGroup]="loginForm">
+     <div class="form-group">
+       <label for="exampleInputEmail1">*Email address</label>
+       <input type="text" class="form-control" formControlName='email' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+       <span *ngIf="isValid('email')">invalid email</span>
+     </div>
+     <div class="form-group">
+       <label for="exampleInputPassword1">*Password</label>
+       <input type="password" class="form-control" formControlName='password' required id="exampleInputPassword1" placeholder="Password">
+       <span *ngIf="isValid('password')">**this field is mandatory</span>
+     </div>
+     <div class="form-group" *ngIf='twofactEnable === true'>
+               <label for="exampleInputPassword1">*otp</label>
+               <input type="number" class="form-control" formControlName='otp' required id="exampleInputPassword1" placeholder="otp">
+               <span *ngIf="isValid('otp')">**this field is mandatory</span>
+          </div>
+     <button (click)="login()" class="btn btn-primary">Login</button><br>
+     <small>click here for <a href='/register'>signup</a></small><br>
+     <small style="color: red">{{sucessMessage}}</small>
+   </form>
+</div>
+</div>
+   
+
+      

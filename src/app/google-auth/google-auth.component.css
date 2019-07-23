@@ -1,0 +1,21 @@
+.card{
+    margin-top: 100px;
+    width:600px;
+    height: 500px;
+    margin-left: 350px;
+    padding-left: 60px;
+}
+
+#token{
+    width:400px;
+    
+}
+.btn{
+    width:400px;
+}
+#imagetag{
+    margin-left: 80px;
+}
+h5{
+    text-align: center;
+}

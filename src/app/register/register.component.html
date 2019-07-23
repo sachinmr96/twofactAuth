@@ -1,0 +1,32 @@
+<div class="card">
+         <div class="card-body">
+                 <h4>SignUp</h4><br>
+<form [formGroup]="myForm">
+                <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="text" class="form-control" formControlName="email"  placeholder="Email" id="email">
+        <span *ngIf="isValid('email')">**email is invalid</span><br>
+        </div>
+        <div class="form-group">
+                        <label for="exampleInputEmail1">Username</label>
+        <input type="text"  class="form-control"  formControlName="username"  placeholder="Username" id="user">
+        <span *ngIf="isValid('username')">**Username is required</span><br>
+         </div>
+         <div class="form-group">
+                        <label for="exampleInputEmail1">Password</label>
+        <input type="password"  class="form-control"  formControlName="password"  placeholder="Password" id="pass">
+        <span *ngIf="isValid('password')">**Password is a mandatory field</span><br>
+        </div>   
+       
+        <button  class="btn btn-primary" (click)="register()">Register</button>
+
+        
+</form>
+
+<small>click here for <a href='/login'>login</a></small><br>
+<div style="text-align: center;">                
+                <small>{{successMessage}}</small>
+        </div>
+</div>
+</div>
+       

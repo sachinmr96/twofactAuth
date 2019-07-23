@@ -1,0 +1,28 @@
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                
+                  
+                      <form [formGroup]='authForm' >
+                          <h5 *ngIf='tfa.twofactEnable === false'>SetUp TFA</h5><br>
+                          <h5 *ngIf='tfa.twofactEnable === true'>ENTER OTP</h5><br>
+                          <div class="form-group" *ngIf='tfa.twofactEnable === false'>
+                      <img [src]="tfa.image" id='imagetag' alt="" class="img-thumbnail" >
+                            </div>
+                            <div class="form-group">
+                          <input type="text" id="token" class="form-control" formControlName="token"  required placeholder="enter six digit token" id="token">
+                          
+                          <span *ngIf="isValid('token')">this field required</span>
+                          </div>
+                          <button class="btn btn-primary" *ngIf='tfa.twofactEnable === false'(click)="verifyCode()">Enable TFA</button>
+                          <button class="btn btn-primary"   *ngIf='tfa.twofactEnable === true' (click)="verifyCode()">send otp</button>
+                        
+                    </form>
+     
+      </div>
+      </div>
+</div>
+</div>
